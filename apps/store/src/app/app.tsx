@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
+import './app.scss'
 import {getAllGames } from '../fake-api';
 
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core';
