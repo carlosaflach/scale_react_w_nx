@@ -34,6 +34,10 @@ Example:
 
 `yarn nx dep-graph`
 
+## Creating React Feature Libraries to Create Routes Command
 
-
-
+`yarn nx g @nrwl/react:lib featureName --directory=directoryName --appProject=appProjectName`
+</br>
+</br>
+Example: `yarn nx g @nrwl/react:lib feature-game-detail --directory=store --appProject=store`
+> The --appProject flag allow us to generate a route component in our store app and link to our feature detail library.
