@@ -2,10 +2,16 @@
 import './app.scss'
 import {getAllGames } from '../fake-api';
 
+import {Header} from '@nxegghead/store/ui-shared'
+
+import { formatRating } from  '@nxegghead/store/util-formatters'
+
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core';
 
 export function App() {
   return (
+    <>
+    <Header />
     <div className="container">
       <div className='games-layout'>
         {getAllGames().map((x) => (
@@ -22,7 +28,7 @@ export function App() {
                 </Typography>
                 <Typography variant='body2' color='textSecondary' component='p'
                 className='game-rating'>
-                  <strong>Rating: </strong> {x.rating}
+                  <strong>Rating: </strong> {formatRating(x.rating)}
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -30,6 +36,7 @@ export function App() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
