@@ -15,7 +15,6 @@ import { useParams } from 'react-router-dom'
 export const StoreFeatureGameDetail = () => {
 
   const params = useParams();
-  console.log('params', params);
   return (
     <Card>
       <CardActionArea>
