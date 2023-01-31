@@ -16,6 +16,7 @@ export const StoreFeatureGameDetail = () => {
 
   const params = useParams();
   return (
+    <div className='container'>
     <Card>
       <CardActionArea>
         <CardContent>
@@ -25,5 +26,6 @@ export const StoreFeatureGameDetail = () => {
         </CardContent>
       </CardActionArea>
     </Card>
+    </div>
   )
 }
