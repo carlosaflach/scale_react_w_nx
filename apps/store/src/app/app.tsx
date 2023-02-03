@@ -50,7 +50,7 @@ export function App() {
   const navigate = useNavigate();
   return (
     <>
-      <Header />
+      <Header title="Board Game Hoard" />
       <div className="container">
         <div className="games-layout">
           {state.loadingState === 'loading' ? 'Loading...' : state.loadingState === 'error' ?  '<div>Error retrieving data </div>': (state.data.map((x) => (
