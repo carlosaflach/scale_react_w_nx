@@ -1,6 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import './app.scss';
-import { getAllGames } from '../fake-api';
 
 import { Header } from '@nxegghead/store/ui-shared';
 
@@ -19,10 +18,11 @@ import { Route } from 'react-router-dom';
 
 import { StoreFeatureGameDetail } from '@nxegghead/store/feature-game-detail';
 import { useEffect, useState } from 'react';
+import { Game } from '@nxegghead/api/util-interfaces';
 
 export function App() {
   const [state, setState] = useState<{
-    data: any[],
+    data: Game[],
     loadingState: 'success' | 'error' | 'loading'
   }>({
     data: [],

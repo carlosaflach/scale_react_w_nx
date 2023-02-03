@@ -8,6 +8,7 @@ import {
 import { formatRating } from '@nxegghead/store/util-formatters';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Game } from '@nxegghead/api/util-interfaces';
 
 // export interface IProps {
 //     match: {
@@ -22,10 +23,10 @@ import { useParams } from 'react-router-dom';
 export const StoreFeatureGameDetail = () => {
   const params = useParams();
   const [state, setState] = useState<{
-    data: any;
+    data: Game;
     loadingState: 'success' | 'error' | 'loading';
   }>({
-    data: {},
+    data: null,
     loadingState: 'success',
   });
 
