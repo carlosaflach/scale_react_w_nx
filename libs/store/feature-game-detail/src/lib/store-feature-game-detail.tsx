@@ -23,7 +23,7 @@ import { Game } from '@nxegghead/api/util-interfaces';
 export const StoreFeatureGameDetail = () => {
   const params = useParams();
   const [state, setState] = useState<{
-    data: Game;
+    data: Game | null;
     loadingState: 'success' | 'error' | 'loading';
   }>({
     data: null,
