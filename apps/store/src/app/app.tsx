@@ -30,20 +30,20 @@ export function App() {
   })
 
   useEffect(() => {
-    setState({
-      ...state,
-      loadingState: 'loading'
-    });
+    setState((s) => ({
+      ...s,
+      loadingState: 'success',
+    }))
 
-    fetch('/api/games').then((x) => x.json()).then((res) => setState({
+    fetch('/api/games').then((x) => x.json()).then((res) => setState((state) => ({
       ...state,
       data: res,
-      loadingState: 'success',
-    })).catch((err) => {
-      setState({
+      loadingState: 'loading',
+    }))).catch((err) => {
+      setState((state) => ({
         ...state,
         loadingState: 'error',
-      })
+      }))
     })
   }, [])
 
